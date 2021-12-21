@@ -1,0 +1,6 @@
+<div>Chrono : {{secondes | chronoFormat}}</div>
+<div class="buttonsChrono">
+    <input type="button" id="btnStart" value="Start" (click)="StartChrono()" [disabled]="actif">
+    <input type="button" id="btnPause" value="Pause" (click)="PauseChrono()" [disabled]="!actif">
+    <input type="button" id="btnReset" value="Reset" (click)="RestartChrono()" [disabled]="secondes == 0">
+</div>
