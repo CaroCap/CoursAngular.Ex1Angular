@@ -8,6 +8,12 @@ import { ContactsComponent } from './components/contacts/contacts.component';
 import { AccueilComponent } from './components/accueil/accueil.component';
 import { ChronoComponent } from './components/chrono/chrono.component';
 import { ChronoFormatPipe } from './pipes/chrono-format.pipe';
+import { ConvertSecondstoDHMSPipe } from './pipes/convert-secondsto-dhms.pipe';
+import { ConvertisseurComponent } from './components/convertisseur/convertisseur.component';
+import { PowPipe } from './pipes/pow.pipe';
+import { FormsModule } from '@angular/forms';
+import { ConvertTemperaturesPipe } from './pipes/convert-temperatures.pipe';// Pour le Two Way Binding
+
 
 @NgModule({
   declarations: [
@@ -16,11 +22,16 @@ import { ChronoFormatPipe } from './pipes/chrono-format.pipe';
     ContactsComponent,
     AccueilComponent,
     ChronoComponent,
-    ChronoFormatPipe
+    ChronoFormatPipe,
+    ConvertSecondstoDHMSPipe,
+    ConvertisseurComponent,
+    PowPipe,
+    ConvertTemperaturesPipe
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule // Pour le Two Way Binding
   ],
   providers: [],
   bootstrap: [AppComponent]

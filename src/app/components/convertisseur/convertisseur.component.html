@@ -1,0 +1,86 @@
+<h1>Exercices de Conversions - Les Custom Pipes</h1>
+
+<div class="container-fluid">
+  <div class="row">
+
+    <div class="col">
+      <div class="card">
+        <div class="card-header bg-success text-white">
+          <h2>Transfomation d'un nombre de secondes en jours - heures - minutes - secondes</h2>
+        </div>
+
+        <div class="card-body">
+          <!-- <p class="card-text">Le nombre de secondes : {{ nbSeconds }}</p> -->
+          <label for="secondes">Le nombre de secondes :</label>
+          <input type="number" name="sec" id="secondes" [(ngModel)]="nbSeconds">
+          <p class="card-text">En J-H-M-S : {{ nbSeconds | convertSecondstoDHMS }}</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="col">
+      <div class="card">
+        <div class="card-header bg-success text-white">
+          Transfomation d'un nombre de secondes en jours - heures - minutes - secondes
+        </div>
+
+        <div class="card-body">
+          <p class="card-text">Le nombre de secondes : {{ nbSeconds2 }}</p>
+          <p class="card-text">En J-H-M-S : {{ nbSeconds2 | convertSecondstoDHMS }}</p>
+        </div>
+      </div>
+    </div> -->
+
+
+  </div>
+  
+  <br>
+
+  <div class="row">
+
+    <div class="col-6">
+      <div class="card">
+        <div class="card-header bg-success text-white">
+          <h2>Elever un nombre à une puissance</h2>
+        </div>
+
+        <div class="card-body">
+          <!-- <p class="card-text">La base : {{ varBase }} - La puissance : {{ varPow }}</p> -->
+          <label for="base">La Base : </label>
+          <input id="base" type="text" class="form-control" [(ngModel)]="varBase">
+          <label for="puissance">La Puissance : </label>
+          <input id="puissance" type="text" class="form-control" [(ngModel)]="varPow">
+          <p class="card-text">Avec le pipe : {{ varBase | pow : varPow }}</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <br>
+
+  <div class="row">
+    <div class="col-6">
+      <div class="card">
+        <div class="card-header bg-success text-white">
+          <h2>Conversion C° -> F° || F° -> C°</h2>
+        </div>
+
+        <div class="card-body">
+          <input type="number" [(ngModel)]="tempUser">
+          <select [(ngModel)]="unitUser">
+            <option value="c">Celsius</option>
+            <option value="f">Fahrenheit</option>
+          </select>
+
+          <div>
+            <p>Avant : {{ tempUser }} {{ unitUser | uppercase }}°</p>
+            <p>Celsius : {{ tempUser | convertTemperatures : 'c' : unitUser }}°</p>
+            <p>Farenheit : {{ tempUser | convertTemperatures : 'f' : unitUser }}°</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
