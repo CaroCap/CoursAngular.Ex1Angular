@@ -5,6 +5,7 @@ import { ContactsComponent } from './components/contacts/contacts.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { ConvertisseurComponent } from './components/convertisseur/convertisseur.component'
 import { ShoppingComponent } from './components/shopping/shopping.component';
+import { ShoppingBisComponent } from './components/shopping-bis/shopping-bis.component';
 
 const routes: Routes = [
   {path : '', component : AccueilComponent}, 
@@ -15,7 +16,8 @@ const routes: Routes = [
   { path: "exos", children: 
   [
     { path: "convertisseur", component: ConvertisseurComponent },
-    { path : 'shopping', component : ShoppingComponent}
+    { path : 'shopping', component : ShoppingComponent},
+    { path : 'shopping-bis', component : ShoppingBisComponent}
   ] }
 ];
 

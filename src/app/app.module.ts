@@ -14,7 +14,8 @@ import { PowPipe } from './pipes/pow.pipe';
 import { FormsModule } from '@angular/forms';
 import { ConvertTemperaturesPipe } from './pipes/convert-temperatures.pipe';
 import { ShoppingComponent } from './components/shopping/shopping.component';
-import { ShoppingListComponent } from './components/shopping/shopping-list/shopping-list.component';// Pour le Two Way Binding
+import { ShoppingListComponent } from './components/shopping/shopping-list/shopping-list.component';
+import { ShoppingBisComponent } from './components/shopping-bis/shopping-bis.component';// Pour le Two Way Binding
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { ShoppingListComponent } from './components/shopping/shopping-list/shopp
     PowPipe,
     ConvertTemperaturesPipe,
     ShoppingComponent,
-    ShoppingListComponent
+    ShoppingListComponent,
+    ShoppingBisComponent
   ],
   imports: [
     BrowserModule,
