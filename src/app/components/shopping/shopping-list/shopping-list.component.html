@@ -1,0 +1,8 @@
+<p>shopping-list works!</p>
+
+<ul>
+    <li *ngFor="let item of listeCourse; let i = index;">
+        {{i}} {{item}}
+        <button (click)="deleteArticle(i)">Supprimer du panier</button>
+    </li>
+</ul>

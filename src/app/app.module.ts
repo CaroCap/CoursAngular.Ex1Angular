@@ -12,7 +12,9 @@ import { ConvertSecondstoDHMSPipe } from './pipes/convert-secondsto-dhms.pipe';
 import { ConvertisseurComponent } from './components/convertisseur/convertisseur.component';
 import { PowPipe } from './pipes/pow.pipe';
 import { FormsModule } from '@angular/forms';
-import { ConvertTemperaturesPipe } from './pipes/convert-temperatures.pipe';// Pour le Two Way Binding
+import { ConvertTemperaturesPipe } from './pipes/convert-temperatures.pipe';
+import { ShoppingComponent } from './components/shopping/shopping.component';
+import { ShoppingListComponent } from './components/shopping/shopping-list/shopping-list.component';// Pour le Two Way Binding
 
 
 @NgModule({
@@ -26,7 +28,9 @@ import { ConvertTemperaturesPipe } from './pipes/convert-temperatures.pipe';// P
     ConvertSecondstoDHMSPipe,
     ConvertisseurComponent,
     PowPipe,
-    ConvertTemperaturesPipe
+    ConvertTemperaturesPipe,
+    ShoppingComponent,
+    ShoppingListComponent
   ],
   imports: [
     BrowserModule,

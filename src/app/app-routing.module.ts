@@ -4,6 +4,7 @@ import { AccueilComponent } from './components/accueil/accueil.component';
 import { ContactsComponent } from './components/contacts/contacts.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { ConvertisseurComponent } from './components/convertisseur/convertisseur.component'
+import { ShoppingComponent } from './components/shopping/shopping.component';
 
 const routes: Routes = [
   {path : '', component : AccueilComponent}, 
@@ -13,7 +14,8 @@ const routes: Routes = [
 
   { path: "exos", children: 
   [
-    { path: "convertisseur", component: ConvertisseurComponent }
+    { path: "convertisseur", component: ConvertisseurComponent },
+    { path : 'shopping', component : ShoppingComponent}
   ] }
 ];
 
